@@ -9,15 +9,15 @@ const middleware = (req, res,next) => {
 
      next();
 }
-
-
-
+// router file 
+app.use(require("./router/auth"));
+app.use(express.json());
 app.get("/", (req,res,)=>{
     res.send(":hellow ");
 
 });
 
-app.get("/login", (req,res)=>{
+app.get("/signin", (req,res)=>{
     res.send("Login Page");
 });
 
