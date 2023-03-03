@@ -1,12 +1,18 @@
 import React from 'react'
+import "./../App.css"
+import "bootstrap/dist/css/bootstrap.css"
 
-const Home = () => {
+const Login = () => {
   return (
     <div>
-      <p>We are the Mern Developer from Login</p>
-      <h1>Ayush Mehrotra</h1>
+     <form className="m-auto signupForm" action="">
+      <p>Email:</p>
+    <input type="email" name="email" placeholder='email@'  />
+    <p>Password :</p>
+    <input type="password" name="password" id="" placeholder='password' />
+     </form>
     </div>
   )
 }
 
-export default Home
+export default Login
