@@ -2,9 +2,13 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
-      <p>We are the Mern Developer  from Contact</p>
-      <h1>Ayush Mehrotra</h1>
+   
+    <div >
+      <h1>Email Us For Any Queries</h1>
+      <p>Email: ayushmehrotra099@gmail.com</p>
+
+      <h2>Social Media</h2>
+    <a href='https://github.com/Ayushoopp'>github</a>
     </div>
   )
 }

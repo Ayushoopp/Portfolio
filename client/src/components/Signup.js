@@ -2,6 +2,7 @@ import React from 'react'
 import "bootstrap/dist/css/bootstrap.css";
 import signupLogo from "../signUp.avif"
 import "./../App.css"
+import { NavLink } from 'react-router-dom';
 
 const Signup = () => {
   return (
@@ -44,6 +45,7 @@ const Signup = () => {
     
     </div>
   </form>
+  <NavLink to="/Login">Already Have An Account?</NavLink>
 </main>
   </body>
 
