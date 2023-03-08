@@ -3,25 +3,61 @@
   padding:0px;
 }
 
+body{
+background:linear-gradient(to right, white 0%, white 50%,wheat 50% wheat 100%);
+color:#be601d;
 
-
-.navbar-brand {
-  color: #c7d1d4;
-} 
- 
+}
 
  .signupImg {
   text-align:center;
   align-items:center;
  }
 
- body{
- background:linear-gradient(to right, rgb(255, 255, 255),rgb(214, 208, 196)) ;
- }
 
 .signupForm {
   display:flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
+}
+
+.Home {
+  display: flex;
+  text-align:center;
+  justify-content:center;
+  padding-top:4rem;
+}
+
+.mainBox{
+  width:400px;
+  height:400px;
+  position:relative;
+  border: #352a22 4px solid;
+  border-radius:8px;
+  background-color: burlywood;
+  overflow: hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.fluidBox {
+  min-width: 200%;
+  min-height:225%;
+  border-radius:30%;
+  position:absolute;
+  background-color: #ffffff;
+  animation:spin 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+      transform: translateY(0px);
+  }
+  100% {
+      transform: translateY(-850px) rotate(360deg);
+  }
 }

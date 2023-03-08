@@ -1,15 +1,18 @@
 import React from 'react'
-import "./../App1.css"
 
+import "./../App.css"
 const Home = () => {
   return (
     <>
- 
-    <div className='Home' >
-      <p >We are the Mern Developer from Home</p>
-      <h1>Ayush Mehrotra</h1>
-    </div>
+    <div class='Home'>
+  <div class="mainBox">
+      <div class="fluidBox">
 
+      </div>
+      <h2>We Are The Mern Developer</h2>
+      <p>Ayush Mehrotra</p>
+  </div>
+  </div>
     </>
   )
 }
