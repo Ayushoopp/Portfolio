@@ -15,7 +15,7 @@ color:#be601d;
  }
 
 
-.signupForm {
+.signForm {
   display:flex;
   justify-content: center;
   text-align: center;
@@ -61,3 +61,17 @@ color:#be601d;
       transform: translateY(-850px) rotate(360deg);
   }
 }
+
+.Box {
+  height:30%;
+  width:30%;
+  display:flex;
+  text-align:center;
+  justify-content:center;
+  flex-direction:column;
+  position:relative;
+  
+  margin-left:30%;
+  border: 3px solid rgb(10, 7, 3);
+}
+
