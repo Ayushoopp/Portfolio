@@ -1,10 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "bootstrap/dist/css/bootstrap.css";
 import signupLogo from "../signUp.avif"
 import "./../App.css"
 import { NavLink } from 'react-router-dom';
 
+
 const Signup = () => {
+  const [user,setUser] = useState({
+    name:'', email:'', phone:'',password:'',cpassword:'',work:''
+  });
+
+  let name, value;
+  const handleInputs = (e) =>{
+   name= e.target.name;
+   value= e.target.value;
+
+   setUser({...user, [name]: value});
+  }
+
   return (
     <div>
 
@@ -17,27 +30,39 @@ const Signup = () => {
   <form class="" >
     <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Name </label>
-  <input type="email" className="ml-3"  placeholder="john Doe" />
+  <input type="text" className="ml-3" name="name"  placeholder="john Doe"
+    value={user.name} 
+    onChange={handleInputs} />
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email </label>
-  <input type="email"  className="ml-3" placeholder="name@example.com" />
+  <input type="email"  className="ml-3" name="email" placeholder="name@example.com"
+    value={user.email} 
+    onChange={handleInputs} />
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">phone </label>
-  <input type="email" className="ml-3" placeholder="+91234567890" /> 
+  <input type="number" className="ml-3" name="phone" placeholder="+91234567890" 
+    value={user.phone}
+    onChange={handleInputs} /> 
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Password </label>
-  <input type="email" className="ml-3" placeholder="john Doe" />
+  <input type="text" className="ml-3" name="password" placeholder="john Doe"
+    value={user.password} 
+    onChange={handleInputs} />
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">CPassword </label>
-  <input type="email" className="ml-3" placeholder="john Doe" />
+  <input type="text" className="ml-3" name="cpassword" placeholder="john Doe"
+    value={user.cpassword} 
+    onChange={handleInputs} />
 </div>
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Your Profession </label>
-  <input type="email" className="ml-3" placeholder="work" />
+  <label for="exampleFormControlInput1" class="form-label">Work</label>
+  <input type="text" className="ml-3" name="work" placeholder="work"
+    value={user.work} 
+    onChange={handleInputs} />
 </div>
     
     <div className="form-group">
