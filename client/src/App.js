@@ -7,7 +7,7 @@ import About from  "./components/About";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Signup from "./components/Signup"
-
+import ErrorPage from "./components/ErrorPage.js";
 
 const App = () => {
   return (
@@ -21,6 +21,7 @@ const App = () => {
    <Route path="/login" element={<Login />} />
    <Route path="/signup" element={<Signup />} />
     
+    <Route element={<ErrorPage />} />
     </Routes>
     </>
     )
