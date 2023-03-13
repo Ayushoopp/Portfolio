@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const Signup = () => {
+  
   const [user,setUser] = useState({
     name:'', email:'', phone:'',password:'',cpassword:'',work:''
   });
@@ -18,6 +19,33 @@ const Signup = () => {
    setUser({...user, [name]: value});
   }
 
+const PostData = async (e) =>{
+  e.preventDefault();
+
+  const { name, email,phone, work , password,cpassword}= user
+
+  const res = await fetch("/register", {
+    method:"POST",
+    headers:{
+      "Content-Type": "application/json"
+    },
+    body:JSON.stringify({
+      name, email,phone, work , password,cpassword
+    })
+  })
+
+  const res1 = await res.json()
+    if(res1.status === 422 || null){
+      window.alert("Registration faled");
+      console.log(res1.status || null);
+    } else {
+      window.alert("Registration Successful");
+     
+    }
+
+}
+
+
   return (
     <div>
 
@@ -27,7 +55,7 @@ const Signup = () => {
     <h1 class="h3 mb-3 fw-normal">Sign Up</h1>
     
     <img class="mb-4 " src={signupLogo} alt="" width="200" height="400" />
-  <form class="" >
+  <form method="POST" >
     <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Name </label>
   <input type="text" className="ml-3" name="name"  placeholder="john Doe"
@@ -66,7 +94,9 @@ const Signup = () => {
 </div>
     
     <div className="form-group">
-      <input type="submit" name="signup" className="form-submit" value="register" />
+      <button type="submit" onClick={PostData} name="signup" className="form-submit" value="register" >
+        Submit
+        </button>
     
     </div>
   </form>

@@ -15,12 +15,8 @@ const About = () => {
             <h6>Web Developer</h6>
           </div>
           <ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
+
+
 </ul> 
       </div>
       </form>
